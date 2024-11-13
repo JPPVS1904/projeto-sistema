@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+    <!-- Barra Lateral -->
+    <div class="d-flex">
+        <div class="bg-primary text-white p-3" style="width: 250px;">
+            <h4 class="text-center">Admin</h4>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="bi bi-house-door"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="bi bi-calendar-check"></i> Agendamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="bi bi-people"></i> Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#"><i class="bi bi-bar-chart-line"></i> Relatórios</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="container-fluid p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="text-primary">Painel de Administração</h2>
+                <button class="btn btn-primary"><i class="bi bi-plus-circle"></i> Novo Agendamento</button>
+            </div>
+
+            <!-- Cards Resumo -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultas Hoje</h5>
+                            <p class="card-text display-6">12</p>
+                            <i class="bi bi-calendar-check float-end fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Total de Pacientes</h5>
+                            <p class="card-text display-6">150</p>
+                            <i class="bi bi-people float-end fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultas Pendentes</h5>
+                            <p class="card-text display-6">8</p>
+                            <i class="bi bi-exclamation-circle float-end fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Cancelamentos</h5>
+                            <p class="card-text display-6">3</p>
+                            <i class="bi bi-x-circle float-end fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela de Consultas -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5>Lista de Agendamentos</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome do Paciente</th>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>João Silva</td>
+                                <td>12/11/2023</td>
+                                <td>14:00</td>
+                                <td><span class="badge bg-success">Confirmado</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Ver</button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="bi bi-x-circle"></i> Cancelar</button>
+                                </td>
+                            </tr>
+                            <!-- Outros agendamentos... -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
